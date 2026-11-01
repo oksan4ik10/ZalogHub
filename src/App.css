@@ -123,6 +123,10 @@
 @media (max-width: 480px) {
     .tasks {
         padding: var(--spacing-lg) var(--spacing-md);
+        max-width: calc(100% - var(--spacing-md) * 2);
+    }
+    .tasks__title{
+        font-size: var(--font-size-lg);
     }
 
     .filters {
