@@ -97,13 +97,16 @@ function App() {
         <button className={`filters__item ${filters === 'completed' ? 'filters__item-active' : ''}`} onClick={()=>changeFilters('completed')}>Выполненные</button>
       </div>
 
-      <ul className="tasks__list list">
+      {filtredTasks.length > 0 && (
+        <ul className="tasks__list list">
         {filtredTasks.map(task => (
           <ItemList key={task.id} task={task} onToggle={toggleTaskCompletion} onDelete={confirmDeleteTask} />
         ))}
 
 
       </ul>
+      )}
+      {filtredTasks.length === 0 && <p className="tasks__empty">Нет задач для отображения.</p>}
 
       <div className="tasks__counter">Всего задач: {tasks.length} | Осталось выполнить: {tasks.filter(task => !task.completed).length}</div>
     </main>
