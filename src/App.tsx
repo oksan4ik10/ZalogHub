@@ -105,7 +105,7 @@ function App() {
 
       </ul>
 
-      <div className="tasks__counter">Всего задач: {filtredTasks.length} | Осталось выполнить: {filtredTasks.filter(task => !task.completed).length}</div>
+      <div className="tasks__counter">Всего задач: {tasks.length} | Осталось выполнить: {tasks.filter(task => !task.completed).length}</div>
     </main>
     {taskToDelete && <ModalDelete onClose={() => { setTaskToDelete(null); }} onDelete={deleteTask} taskToDelete={taskToDelete} />}
     </>
