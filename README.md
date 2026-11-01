@@ -13,3 +13,7 @@
 ## Время выполнения
 
 60 минут.
+
+## Deploy
+
+[Deploy](https://zaloghub-to-do.netlify.app/)
